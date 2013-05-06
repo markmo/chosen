@@ -81,6 +81,7 @@ class AbstractChosen
     this.results_reset_cleanup() if not @is_multiple
     this.result_clear_highlight()
     @result_single_selected = null
+    @allow_single_deselect = if @options.allow_single_deselect? and @form_field.options[0]? and @form_field.options[0].text is "" then @options.allow_single_deselect else false
     this.results_build()
 
   results_toggle: ->

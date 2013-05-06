@@ -219,6 +219,7 @@ Copyright (c) 2011 by Harvest
       }
       this.result_clear_highlight();
       this.result_single_selected = null;
+      this.allow_single_deselect = (this.options.allow_single_deselect != null) && (this.form_field.options[0] != null) && this.form_field.options[0].text === "" ? this.options.allow_single_deselect : false;
       return this.results_build();
     };
 
